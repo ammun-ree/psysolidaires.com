@@ -169,7 +169,10 @@ float: right;
     margin-left: 3.9%;
     margin-right: 3.9%;
 }
-
+.rtl .content{
+  float: right;
+  text-align: right;
+}
 
 /**
  * Posts

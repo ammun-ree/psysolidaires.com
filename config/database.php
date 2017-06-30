@@ -56,7 +56,7 @@ return [
             'driver'    => 'mysql',
             'host'      => 'localhost',
             'port'      => '',
-            'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
+            //'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
             'database'  => 'psysolidaires_cms',
             'username'  => 'root',
             'password'  => 'root',
