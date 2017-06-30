@@ -1,0 +1,10 @@
+description = "navigation menu"
+==
+<ul class="cairo">
+<li><a {% if this.page.id == 'home' %}class="active"{% endif %} href="{{ 'home'|page }}">{{ 'acceuil'|_ }}</a></li>
+<li><a {% if this.page.id == 'publications' %}class="active"{% endif %}  href="{{ 'publications'|page }}">{{ 'Publications'|_ }}</a></li>
+<li><a {% if this.page.id == 'events' %}class="active"{% endif %} href="{{ 'events'|page }}">{{ 'evenement'|_ }}</a></li>
+    <li><a {% if this.page.id == 'about' %}class="active"{% endif %} href="{{ 'about'|page }}">{{ 'à propos'|_ }}</a></li>
+<li><a {% if this.page.id == 'contact' %}class="active"{% endif %} href="{{ 'contact'|page }}">{{ 'Nous contacter'|_ }}</a></li>
+
+</ul>

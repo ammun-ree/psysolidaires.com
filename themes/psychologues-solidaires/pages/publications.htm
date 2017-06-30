@@ -1,0 +1,20 @@
+title = "publications"
+url = "/publications"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeUrl[en] = "/publications"
+localeUrl[ar] = "/publications"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "publications/category"
+postPage = "publications/publication"
+==
+<div class="content">
+{% component 'blogPosts' %}
+</div>

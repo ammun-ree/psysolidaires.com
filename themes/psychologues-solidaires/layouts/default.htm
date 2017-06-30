@@ -1,0 +1,74 @@
+description = "default"
+
+[localePicker]
+forceUrl = 0
+==
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>PsySolidaires - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="PsySolidaires">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="PsySolidaires">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/favico.png'|theme }}">
+        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Amiri:400,700|Cairo:400,700&amp;subset=arabic" rel="stylesheet">
+        {% styles %}
+    </head>
+    
+    
+    <body class="{% if  activeLocale  == 'ar' %}
+    rtl
+    {% else %} ltr
+{% endif %}
+    
+    ">
+    <div class="container">
+    {% if  activeLocale  == 'ar' %}
+     <div class="topbar section group">
+     <div class="language-switcher col span_2_of_12">
+     {% partial "languages" %}
+     </div>
+     <div class="navigation-menu col span_8_of_12">
+     {% partial "nav-menu" %}
+     </div>
+      <div class=" logo col span_2_of_12">
+      <a  href="{{ 'home'|page }}"><img src="{{ 'logo-navbar.png'|media }}" /></a>
+
+    </div>
+    </div>
+    {% else %}
+    <div class="topbar section group">
+     <div class="logo col span_2_of_12">
+     <a  href="{{ 'home'|page }}"><img src="{{ 'logo-navbar.png'|media }}" /></a>
+     </div>
+     <div class="navigation-menu col span_8_of_12">
+     {% partial "nav-menu" %}
+     </div>
+      <div class="language-switcher col span_2_of_12">
+        {% partial "languages" %}
+    </div>
+    </div>
+    {% endif %}
+     
+    <div class="main-wrapper">
+    {% page %}
+    </div>
+    
+        
+    </div>
+   
+    </body>
+    
+    
+    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        {% scripts %}
+
+    {% framework %}
+
+</html>

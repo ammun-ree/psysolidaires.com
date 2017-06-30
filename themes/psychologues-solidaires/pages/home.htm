@@ -1,0 +1,13 @@
+title = "home"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeUrl[en] = "/home"
+localeUrl[ar] = "/home"
+==
+<h1 class="page-title cairo">{{ 'Psychologues solidaires'|_ }}</h1>
+<div class="content">
+{% content 'about.htm' %}
+</div>

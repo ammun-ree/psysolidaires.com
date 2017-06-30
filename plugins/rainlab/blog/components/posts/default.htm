@@ -1,0 +1,51 @@
+{% set posts = __SELF__.posts %}
+<div class="sction group">
+  {% for post in posts %}
+  <div class="col span_6_of_12">
+  <div class="post-panel post-{{post.slug}}">
+    <a href="{{post.url}}">
+      <div class="featured_image" style="background-image : url('{{ post.featured_images[0].path }}')"></div>
+    </a>
+    <ul class="post-categories">
+      {% for category in post.categories %}
+        <li><a href="{{ category.url }}">{{ category.name }}</a></li>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </ul>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+
+  </div>
+</div>
+
+{% endfor %}
+
+{% if posts.lastPage > 1 %}
+<!--ul class="pagination">
+        {% if posts.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..posts.lastPage %}
+            <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if posts.lastPage > posts.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul-->
+{% endif %}
+
+
+
+
+<!--p class="info">
+            Posted
+            {% if post.categories.count %} in {% endif %}
+            {% for category in post.categories %}
+                <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            on {{ post.published_at|date('M d, Y') }}
+        </p-->
+
+<!--p class="excerpt">{{ post.summary |raw }}</p-->

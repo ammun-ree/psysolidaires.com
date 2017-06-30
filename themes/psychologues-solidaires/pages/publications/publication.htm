@@ -1,0 +1,14 @@
+title = "publication"
+url = "/publications/publication/:slug"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeUrl[en] = "/publications/publication/:slug/:page?"
+localeUrl[ar] = "/publications/publication/:slug/:page?"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "publications/category"
+==
+{% component 'blogPost' %}

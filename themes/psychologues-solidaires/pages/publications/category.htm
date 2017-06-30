@@ -1,0 +1,24 @@
+title = "publications category"
+url = "/publications/category/:slug"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeUrl[en] = "/publications-category"
+localeUrl[ar] = "/publications-category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "about"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = ":slug"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "about"
+postPage = "about"
+==
+{% component 'blogCategories' %}

@@ -1,0 +1,210 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    font-family: 'Lora', serif;
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 200%;
+    color: navy;
+    text-align: center;
+}
+
+h2 {
+    font-size: 150%;
+    color: red;
+    padding-left: 15px;
+}
+
+h3 {
+    margin: 4px 0px 12px 0px;
+}
+
+p, ul, li, td {
+    color: black;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: #3679c3;
+    text-decoration: none;
+}
+
+a:active, a:focus {
+    color: navy;
+}
+
+
+/**
+Translation Handling
+**/
+
+
+/*
+RTL Arrabic
+ */
+
+.rtl {
+    text-align: right;
+    font-family: 'Amiri', serif;
+}
+
+.rtl .page-title {
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.rtl .cairo {
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.rtl .navigation-menu ul li {
+    float: right;
+}
+
+.rtl .content p {
+    font-size: 120%;
+}
+
+.rtl .language-switcher {
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.ltr {
+    text-align: left;
+}
+
+
+/**
+ * Layout
+ */
+
+.container {
+    margin-left: 3.9%;
+    margin-right: 3.9%;
+}
+
+
+/**
+ * TopBar
+ */
+
+.topbar {
+    background-color: #fff5f5;
+}
+
+.navigation-menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 115px;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+
+}
+
+.navigation-menu ul li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: capitalize;
+}
+
+.navigation-menu ul li a:hover {
+    color: black;
+    font-weight: 700;
+}
+
+.navigation-menu ul li .active {
+    color: black;
+    font-weight: 700;
+}
+
+.language-switcher {
+    margin-top: 115px;
+}
+
+.language-switcher a {
+    color: navy;
+}
+
+.logo img {
+    max-height: 150px;
+}
+
+
+/**
+ * Pages
+ */
+.rtl .page-wrapper{
+  text-align: right;
+float: right;
+}
+.main-wrapper {
+    margin-top: 5%;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 6%;
+}
+
+.content {
+    text-align: justify;
+    margin-left: 3.9%;
+    margin-right: 3.9%;
+}
+
+
+/**
+ * Posts
+ *
+ */
+
+
+/*
+Posts Grid
+ */
+
+.rtl .post-panel {
+    text-align: right;
+}
+
+.post-panel .featured_image {
+    height: 45vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.post-categories {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+    margin: 6px 0 0 0;
+}
+
+.post-categories li a {
+    color: #2810d4;
+}
+
+.post-categories li a:hover {
+    text-decoration: underline;
+}
