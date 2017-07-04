@@ -1,6 +1,0 @@
-plugin:
-    name: 'amunre.events::lang.plugin.name'
-    description: 'amunre.events::lang.plugin.description'
-    author: amunre
-    icon: oc-icon-clock-o
-    homepage: ''
