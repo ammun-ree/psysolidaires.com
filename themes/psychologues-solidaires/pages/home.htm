@@ -6,8 +6,19 @@ is_hidden = 0
 [viewBag]
 localeUrl[en] = "/home"
 localeUrl[ar] = "/home"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
 ==
 <h1 class="page-title cairo">{{ 'Psychologues solidaires'|_ }}</h1>
 <div class="content">
 {% content 'about.htm' %}
+</div>
+<div class="content">
+{% component 'blogPosts' %}
 </div>
