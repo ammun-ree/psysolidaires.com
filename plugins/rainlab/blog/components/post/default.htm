@@ -1,9 +1,8 @@
 {% set post = __SELF__.post %}
 
-<div class="content">
+<div class="post-content">
   <h2>{{post.title}}</h2>
-<div class="section group">
-</div>
+
   {{ post.content_html|raw }}
 </div>
 
