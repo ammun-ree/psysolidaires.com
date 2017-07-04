@@ -1,6 +1,10 @@
 {% set posts = __SELF__.posts %}
-<div class="sction group">
+{% set x = 0 %}
+
   {% for post in posts %}
+  {% if  x % 2 == 0 %}
+  <div class="sction group">
+  {% endif %}
   <div class="col span_6_of_12">
   <div class="post-panel post-{{post.slug}}">
     <a href="{{post.url}}">
@@ -15,6 +19,10 @@
 
   </div>
 </div>
+{%  set x =  x + 1 %}
+{% if  x % 2 == 0 %}
+</div>
+{% endif %}
 
 {% endfor %}
 
